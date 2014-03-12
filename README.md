@@ -42,6 +42,8 @@ Each dungeon floor layout is compounded by cells and each of those cells have a 
 Examples
 ---------
 
+White cells are the corridors and the rooms, the yellow cells are the doors and the red cells are the stairs.
+
 Small:
 
 ![Boletarian prison](https://raw.github.com/jorgeprodriguez/random-dungeon-generator/master/examples/boletarian-prison.jpg)
