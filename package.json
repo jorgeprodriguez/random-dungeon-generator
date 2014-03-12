@@ -1,0 +1,28 @@
+{
+  "name": "random-dungeon-generator",
+  "version": "0.0.1",
+  "description": "A javascript dungeon random generator.",
+  "author": "Jorge Perez",
+  "homepage": "http://www.jorgeprodriguez.me",
+  "license": "MIT",
+  "licenseUrl": "http://www.opensource.org/licenses/mit-license.php",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jorgeprodriguez/random-dungeon-generator"
+  },
+  "keywords": [
+    "random",
+    "dungeon",
+    "generator",
+    "javascript"
+  ],
+  "devDependencies": {
+    "grunt": "~0.4.1",
+    "grunt-contrib-concat": "~0.3.0",
+    "grunt-contrib-connect": "~0.5.0",
+    "grunt-contrib-copy": "~0.4.1",
+    "grunt-contrib-clean": "~0.5.0",
+    "grunt-contrib-uglify": "~0.2.4",
+    "grunt-mkdir": "~0.1.1"
+  }
+}

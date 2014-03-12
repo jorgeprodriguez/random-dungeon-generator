@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Random Dungeon Generator</title>
+    <script src="bin/rdg.dev.js"></script>
+    <script type="text/javascript">
+      function run() {
+        var body = document.getElementById('body');
+        var canvas = document.createElement('canvas');
+        var dungeon = new Dungeon();
+
+        dungeon.addFloor(33, 33);
+        dungeon.draw(0, canvas);
+        
+        body.appendChild(canvas);        
+      }  	
+    </script>
+  </head>
+  <body id='body' style="margin: 0;" onload='run();'>
+  </body>
+</html>
