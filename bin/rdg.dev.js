@@ -449,8 +449,15 @@ function Floor(width, height, type) {
 
 
 	function expandCorridorsFrom(room) {
-		if(that.layout[room.inix][room.iniy].connected) return;
-		else connectRoom(room);
+		if(that.layout[room.inix][room.iniy].connected) {
+			return;
+		} else {
+			for(var x = room.inix, lx = room.inix+room.width; x < lx; x++) {
+				for(var y = room.iniy, ly = room.iniy+room.height; y < ly; y++) {
+					that.layout[x][y].connected = true;
+				}
+			}			
+		} 
 		
 		for(var i = 0, l = room.doors.length; i < l; i++) {
 			var fromDoor = room.doors[i];
@@ -494,15 +501,6 @@ function Floor(width, height, type) {
 	};
 
 
-	function connectRoom(room) {
-		for(var x = room.inix, lx = room.inix+room.width; x < lx; x++) {
-			for(var y = room.iniy, ly = room.iniy+room.height; y < ly; y++) {
-				that.layout[x][y].connected = true;
-			}
-		}
-	};
-
-
 	function connectDoors(start, goal, dir) {	
 		start = that.layout[start.x+dir.dx][start.y+dir.dy];
 
@@ -519,16 +517,16 @@ function Floor(width, height, type) {
 
 
 	function generateDeadEnds() {
-		var nDeadEnds = rnd.nextRange(2, that.rooms.length);
+		var nDeadEnds = rnd.nextRange(0, that.rooms.length);
 
 		for(var i = 0; i < nDeadEnds; i++) {
-			var startPoint = getStartPoint();
+			var corridorCell = getCorridorCell();
 			var deadEnd = getDeadEnd();
 
-			if(!startPoint || !deadEnd) {
+			if(!corridorCell || !deadEnd) {
 				return;
 			} else {
-				if(aStar.searchPath(that.layout, startPoint, deadEnd, 2)){
+				if(aStar.searchPath(that.layout, corridorCell, deadEnd, 2)){
 					takeWalk(aStar.buildPath());
 					that.layout[deadEnd.x][deadEnd.y].type = Cell.DEADEND;
 					that.layout[deadEnd.x][deadEnd.y].connected = true;
@@ -539,7 +537,7 @@ function Floor(width, height, type) {
 	};
 
 
-	function getStartPoint() {
+	function getCorridorCell() {
 		var inix = turnOdd(rnd.nextRange(0, that.width));
 		var iniy = turnOdd(rnd.nextRange(0, that.height));
 
