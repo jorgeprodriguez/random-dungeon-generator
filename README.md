@@ -43,12 +43,12 @@ Examples
 ---------
 
 Small:
-![Boletarian prison](https://raw.github.com/github/random-dungeon-generator/master/examples/boletarian-prison.jpg)
+![Boletarian prison](https://raw.github.com/jorgeprodriguez/random-dungeon-generator/master/examples/boletarian-prison.jpg)
 
 Medium:
-![The Dark Keep](https://raw.github.com/github/random-dungeon-generator/master/examples/the-dark-keep.jpg)
+![The Dark Keep](https://raw.github.com/jorgeprodriguez/random-dungeon-generator/master/examples/the-dark-keep.jpg)
 
-![Tower of Latria](https://raw.github.com/github/random-dungeon-generator/master/examples/tower-of-latria.jpg)
+![Tower of Latria](https://raw.github.com/jorgeprodriguez/random-dungeon-generator/master/examples/tower-of-latria.jpg)
 
 Big:
-![Bottle Grotto](https://raw.github.com/github/random-dungeon-generator/master/examples/bottle-groto.jpg)
+![Bottle Grotto](https://raw.github.com/jorgeprodriguez/random-dungeon-generator/master/examples/bottle-groto.jpg)
